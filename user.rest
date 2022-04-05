@@ -1,0 +1,10 @@
+GET http://localhost:3000/api/courses
+
+###
+
+POST http://localhost:3000/api/courses
+# Content-Type: application/json
+
+{
+    "name": "new course",
+}
