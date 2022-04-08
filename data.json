@@ -1,14 +1,1 @@
-[
-  {
-    "id": 1,
-    "name": "course 1"
-  },
-  {
-    "id": 2,
-    "name": "course 2"
-  },
-  {
-    "id": 3,
-    "name": "course 3"
-  }
-]
+[{"id":1,"name":"course 1"},{"id":2,"name":"course 2"},{"id":3,"name":"course 3"},{"id":4,"name":"newcourse"},{"id":5,"name":"newcourse"},{"id":6,"name":"newcourse"},{"id":7,"name":"newcourse"},{"id":8,"name":"newcourse"},{"id":9,"name":"newcourse"},{"id":10,"name":"newcourse"},{"id":11,"name":"newcourse"},{"id":12,"name":"newcourse"}]

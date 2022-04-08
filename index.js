@@ -32,9 +32,18 @@ app.post('/api/courses', (req, res) => {
   res.send(course);
 
   const data = JSON.stringify(courses);
-  fs.writeFile('data.json', data, 'utf8');
-  res.status(201).send("course created successfully.")
+  fs.writeFile('data.json', data, err => {
+    if (err) {
+      console.log('error');
+    } else {
+      res.status(201).send("course created successfully.")
+      console.log('success');
+    }
+  });
 });
+
+
+
 app.put('/api/courses/:id',(req, res) => {
   const course =  courses.find(c => c.id === parseInt(req.params.id));
   if (!course) return res.status(404).send('Course not found')
