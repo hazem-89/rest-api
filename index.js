@@ -78,7 +78,7 @@ const  validateCourse = (course) => {
 app.delete('/api/courses/:id',  (req, res) => {
   const course =  courses.find(c => c.id === parseInt(req.params.id));
   if (!course) return res.status(404).send('Course not found');
-
+ 
  const index =  courses.indexOf(course);
  courses.splice(index, 1);
 
