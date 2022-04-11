@@ -9,13 +9,13 @@
 
 }
 
-.add-container{
+#add-container{
   width: 400px;
   height: 400px;
   background: rgb(74, 21, 21);
   display: none;
 }
-.add-container.active{
+#add-container.active{
   display: block;
 
 }
