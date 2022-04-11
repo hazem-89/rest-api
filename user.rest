@@ -3,8 +3,26 @@ GET http://localhost:3000/api/courses
 ###
 
 POST http://localhost:3000/api/courses
-# Content-Type: application/json
+Content-Type: application/json
 
 {
-    "name": "newcourse"
+    "name": "new course random id 3 ",
+    "description": "new course description random id",
+    "price": 500
 }
+
+###
+
+PUT http://localhost:3000/api/courses/5
+Content-Type: application/json
+
+{
+    "name": "new course 5",
+    "description": "new course 2 description",
+    "price": 500
+}
+
+###
+
+DELETE  http://localhost:3000/api/courses/6
+
