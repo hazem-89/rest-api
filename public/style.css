@@ -1,0 +1,21 @@
+.edit-container {
+  width: 400px;
+  height: 400px;
+  background: rgb(74, 21, 21);
+  display: none;
+}
+.edit-container.active{
+  display: block;
+
+}
+
+.add-container{
+  width: 400px;
+  height: 400px;
+  background: rgb(74, 21, 21);
+  display: none;
+}
+.add-container.active{
+  display: block;
+
+}
