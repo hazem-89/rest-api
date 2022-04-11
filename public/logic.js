@@ -10,15 +10,6 @@ async function getData() {
   } catch (err) {
       console.log(err)
   }
-
-  // fetch("http://localhost:3000/api/courses/")
-  // .then(function(response) {
-  //     return response.json();
-  // })
-  // .then(function(listOfCourses) {
-  //     displayListOfCourses(listOfCourses);
-  //     addCourse(listOfCourses)
-  // })
 }
 const initSite = () => {
   getData();
@@ -60,7 +51,6 @@ const displayListOfCourses =  (listOfCourses) => {
         editContainer.classList.add('active')
       })
       
-      const editFormContainer = document.createElement("form");
       const nameInput = document.createElement("input")
       nameInput.placeholder = 'Course Name'
       nameInput.value = course.name;
@@ -87,7 +77,9 @@ const displayListOfCourses =  (listOfCourses) => {
             })
         }).then(res => res.json()).then((res) =>{
           console.log(res);
-          course.name = res.name;
+          courseTitle.innerText = nameInput.value;
+          courseDescription.innerText = descriptionInput.value;
+          coursePrice.innerText = priceInput.value;
         })
         editContainer.classList.remove('active')
       })
@@ -97,7 +89,6 @@ const displayListOfCourses =  (listOfCourses) => {
       container.appendChild(courseDescription);
       container.appendChild(coursePrice);
       container.appendChild(openEditContainerBtn);
-      editContainer.appendChild(editFormContainer);
       editContainer.appendChild(nameInput);
       editContainer.appendChild(descriptionInput);
       editContainer.appendChild(priceInput);
@@ -109,6 +100,11 @@ const displayListOfCourses =  (listOfCourses) => {
     })
   }
   const addCourse = (listOfCourses) => {
+    const addContainer = document.getElementById('add-container');
+    document.getElementById("Add-New").addEventListener("click",  () => {
+    addContainer.classList.add('active')
+    console.log('add-C');
+  })
   const addNameInput = document.getElementById("name")
   const addDescriptionInput = document.getElementById("description")
   const addPriceInput = document.getElementById("price")
@@ -128,7 +124,7 @@ const displayListOfCourses =  (listOfCourses) => {
     }).then(res => res.json())
     .then((res) => {
       console.log(res)
-      result.innerText = 'course added successfully'
+      result.innerText ="success"
       const container = document.createElement("div");
       container.className = "container"
       const courseTitle = document.createElement("h3");
@@ -144,9 +140,5 @@ const displayListOfCourses =  (listOfCourses) => {
 
     });
   })
-  const addContainer = document.getElementById('add-container');
-    document.getElementById("Add-New").addEventListener("click",  () => {
-    addContainer.classList.add('active')
-    console.log('add');
-  })
+
   }
