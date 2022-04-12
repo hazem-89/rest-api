@@ -6,6 +6,7 @@ async function getData() {
       return await response.json().then( (listOfCourses) => {
         displayListOfCourses(listOfCourses)
         addCourse(listOfCourses)
+        findCourse(listOfCourses)
       })
   } catch (err) {
       console.log(err)
@@ -141,4 +142,34 @@ const displayListOfCourses =  (listOfCourses) => {
     });
   })
 
+  }
+
+  const findCourse = (listOfCourses) => {
+    const findContainer = document.createElement("div");
+    const searchInput = document.createElement("input");
+    const searchBtn = document.createElement("button")
+    searchBtn.innerText = 'Find'
+    searchBtn.addEventListener("click", () => {
+      console.log('searchBtn');
+      for (let i = 0; i < listOfCourses.length; i++) {
+        const course = listOfCourses[i];
+        if (searchInput.value === course.name || searchInput.value === course.description ) {
+          const container = document.createElement("div");
+          container.className = "container"
+          const courseTitle = document.createElement("h3");
+          courseTitle.innerText = `course name :${course.name}`;
+          const courseDescription = document.createElement("h3");
+          courseDescription.innerText = `description: ${course.description}`;
+          const coursePrice = document.createElement("h3");
+          coursePrice.innerText = course.price;
+          main.appendChild(container);
+          container.appendChild(courseTitle);
+          container.appendChild(courseDescription);
+          container.appendChild(coursePrice);
+        }
+      }
+    })
+    main.appendChild(findContainer)
+    findContainer.appendChild(searchInput);
+    findContainer.appendChild(searchBtn);
   }
