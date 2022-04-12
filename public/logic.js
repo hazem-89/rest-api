@@ -100,7 +100,7 @@ const displayListOfCourses =  (listOfCourses) => {
       }
     })
   }
-  const addCourse = (listOfCourses) => {
+  const addCourse = () => {
     const addContainer = document.getElementById('add-container');
     document.getElementById("Add-New").addEventListener("click",  () => {
     addContainer.classList.add('active')
@@ -147,6 +147,7 @@ const displayListOfCourses =  (listOfCourses) => {
   const findCourse = (listOfCourses) => {
     const findContainer = document.createElement("div");
     const searchInput = document.createElement("input");
+    searchInput.placeholder = "Search by name or description"
     const searchBtn = document.createElement("button")
     searchBtn.innerText = 'Find'
     searchBtn.addEventListener("click", () => {
