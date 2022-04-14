@@ -1,21 +1,111 @@
+.main-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button {
+  background:rgb(45, 193, 215);
+  border: none;
+  border-radius: .5em;
+}
+.main-buttons button {
+  width: 200px;
+  padding: 1em;
+  margin: 2em;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  border: solid 1px #3b3939;
+  margin: 1em 0;
+}
+.container h4,p{
+  width: 100%;
+  padding-left:.5em;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.btn-container{
+  margin-bottom: .5em;
+}
+.btn-container button {
+  padding: .5em;
+  width: 100px;
+  margin-left: 2em;
+ 
+}
+.find-course-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.find-course-container input {
+  width: 300px;
+  padding: .2em
+}
+.find-course-container button{
+  padding: .5em;
+  width: 100px;
+  margin-left: 2em;
+}
 .edit-container {
+  position: absolute;
+  top: 4em;
+  left: calc(50% - 200px);
   width: 400px;
   height: 400px;
-  background: rgb(74, 21, 21);
+  background: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2em;
+  gap: 1em;
   display: none;
 }
 .edit-container.active{
-  display: block;
-
+  display: flex;
 }
 
+.edit-container,
+#add-container 
+input {
+  padding: 0.5em;
+  border-radius: .5em;
+  border: .5px solid #000;
+  width: 400px;
+}
+.edit-container,
+#add-container
+ button {
+  padding: .5em;
+  width: 100px;
+}
 #add-container{
+  position: absolute;
+  top: 4em;
+  left: calc(50% - 200px);
   width: 400px;
   height: 400px;
-  background: rgb(74, 21, 21);
+  background: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2em;
+  gap: 1em;
   display: none;
 }
 #add-container.active{
-  display: block;
+  display: flex;
 
+}
+.result{
+  font-size: 1.3em;
+  color: #000;
+}
+.result.error{
+  color: rgb(227, 12, 12);
 }

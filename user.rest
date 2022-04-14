@@ -6,8 +6,8 @@ POST http://localhost:3000/api/courses
 Content-Type: application/json
 
 {
-    "name": "new course random id 3 ",
-    "description": "new course description random id",
+    "name": "new course 455",
+    "description": "new course description",
     "price": 500
 }
 
