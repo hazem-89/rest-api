@@ -1,10 +1,16 @@
 ## Rest API
 
-Node.JS + Express
+A rest API for online courses, every course has four different properties "id, name, description, and price", the Clint with help of the front-end part can manipulate the data ex: add or delete a specific course.
 
-# Getting Started
+The project is built using
+
+## Node.JS + Express
+
+# Before starting
 
 ### `npm i`
+
+# To start
 
 ### `npm start`
 
