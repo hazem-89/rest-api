@@ -18,13 +18,9 @@ console.log(courses);
 const  validateCourse = (course) => {
   const schema = Joi.object ({
     name: Joi.string()
-        .min(3)
-        .max(30)
         .required(),
         
         description: Joi.string()
-        .min(10)
-        .max(250)
         .required(),
         
         price: Joi.number()
@@ -51,7 +47,7 @@ app.post('/api/courses', (req, res) => {
   }
    else { 
     const course = {
-    id: courses.length + 1,
+    id: Math.ceil(Math.random() * 1000 + 10),
     name: req.body.name,
     description: req.body.description,
     price: req.body.price,
